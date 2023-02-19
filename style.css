@@ -1,0 +1,130 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: hsl(30, 38%, 92%);
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+}
+.grid{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 15px;
+    overflow:hidden;
+}
+.img img{
+    max-width: 100%;
+}
+.card-content{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-category{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: hsl(228, 12%, 48%);
+    font-size: 13px;
+    font-weight: 500;
+}
+.name{
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    line-height: 1em;
+}
+.description{
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6rem;
+}
+.prices{
+display: flex;
+align-items: center;
+
+}
+.cprice{
+    font-family: 'Fraunces', serif;
+    font-size: 25px;
+    color: hsl(158, 36%, 37%);
+    margin-right: 25px;
+}
+.lprice{
+   color: hsl(228, 12%, 48%);
+   text-decoration: line-through;
+}
+.cta{
+    background: hsl(158, 36%, 37%);
+    border: none;
+    padding: 12px 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .3s ease;
+    width: 100%;
+}
+.cta:hover{
+    background: hsl(158, 36%, 21%);
+}
+.cta img{
+    padding-right: 7px;
+}
+
+@media only screen and (max-width: 628px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card-content{
+        display: block;
+    }
+    .product-category, .name, .description, .prices{
+        padding-bottom: 23px;
+    }
+}
+@media only screen and (max-width: 376px){
+   .container{
+    margin: 15px auto;
+    padding: 0 15px;
+   }
+   .img img{
+    max-height: 290px;
+   }
+   .card-content{
+    padding: 24px;
+   }
+   .product-category, .name, .description, .prices{
+    padding-bottom: 16px;
+   }
+   .name{
+    font-size: 28px;
+   }
+   .description{
+    font-size: 12px;
+   }
+   .cprice{
+    font-size: 22px;
+   }
+   .cta{
+    font-size: 13px;
+   }
+
+}
